@@ -43,6 +43,11 @@
       padding: 3rem 3.5rem;
     }
 
+    header {
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
     h1 {
       font-size: 2rem;
       font-weight: 400;
@@ -50,13 +55,15 @@
       color: var(--accent);
       text-transform: uppercase;
       margin-bottom: 0.4rem;
+      padding-right: 140px; /* room for portrait */
     }
 
     .subtitle {
       font-family: var(--font-sans);
       font-size: 0.95rem;
       color: var(--muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
+      padding-right: 140px; /* room for portrait */
     }
 
     .contact {
@@ -64,14 +71,24 @@
       font-size: 0.9rem;
       color: var(--muted);
       margin-bottom: 0.2rem;
+      padding-right: 140px; /* room for portrait */
     }
 
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
+    .contact-email a {
+      font-weight: 600;
     }
-    .contact a:hover {
-      text-decoration: underline;
+
+    .portrait {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 115px;
+      height: 115px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     hr {
@@ -120,6 +137,7 @@
       margin-left: 1.2rem;
       font-size: 0.92rem;
     }
+
     ul li {
       margin-bottom: 0.3rem;
     }
@@ -128,14 +146,15 @@
       font-size: 0.9rem;
       margin-top: 0.4rem;
     }
-    
+
+    /* Global link style (including email & press links) */
     a {
       color: #1a1a1a;
       text-decoration: underline;
       text-underline-offset: 3px;
       transition: color 0.2s ease;
     }
-    
+
     a:hover {
       color: #555555;
       text-decoration: underline;
@@ -185,15 +204,26 @@
       main {
         grid-template-columns: 1fr;
       }
+      h1,
+      .subtitle,
+      .contact {
+        padding-right: 0;
+      }
+      .portrait {
+        position: static;
+        display: block;
+        margin: 0 0 1.2rem auto;
+      }
     }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
+      <img src="portrait.jpg" alt="Portrait of Louis Marteau" class="portrait" />
       <h1>Louis Marteau</h1>
       <div class="subtitle">Art Market Professional | Auction House Specialist | Independent Art Dealer</div>
-      <div class="contact">📧 <a href="mailto:louis.marteau@icloud.com">louis.marteau@icloud.com</a></div>
+      <div class="contact contact-email">📧 <a href="mailto:louis.marteau@icloud.com">louis.marteau@icloud.com</a></div>
       <div class="contact">📞 +33 6 74 86 74 17</div>
       <div class="contact">📍 94 rue La Fayette, 75010 Paris, France</div>
       <div class="contact"><strong>Immigration status:</strong> Green card application in process (married to U.S. citizen); no employer sponsorship required.</div>
