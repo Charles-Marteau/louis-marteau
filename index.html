@@ -14,8 +14,6 @@
       --muted: #666666;
       --border: #e0e0e0;
       --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-                   -system-ui, -apple-system, BlinkMacSystemFont,
-                   -system, -apple-system, BlinkMacSystemFont,
                    "Segoe UI", sans-serif;
     }
 
@@ -138,14 +136,12 @@
       margin-bottom: 3px;
     }
 
-    .pill {
-      display: inline-block;
-      padding: 2px 7px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-top: 2px;
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
 
     .side p, .side li {
@@ -236,11 +232,20 @@
                 <li>Developed relationships with collectors, institutions, and advisors.</li>
                 <li>Participated in selected events, including FAB Paris 2024 (Grand Palais, Young Exhibitors) and Trois Crayons London 2025.</li>
               </ul>
+              <p style="margin-top:6px; font-size:0.82rem;">
+                <strong>Press &amp; Media:</strong>
+                <a href="https://www.latribunedelart.com/article12474?lang=en" target="_blank" rel="noopener noreferrer">La Tribune de l’Art</a>,
+                <a href="https://parisdiarybylaure.com/at-fab-great-surprises-and-a-new-generation/" target="_blank" rel="noopener noreferrer">Paris Diary by Laure</a>
+              </p>
             </div>
 
             <div class="item">
               <div class="role">Co-Founder</div>
-              <div class="org-line">Agar Marteau Fine Art</div>
+              <div class="org-line">
+                <a href="https://www.agarmarteaufineart.com/about-us/" target="_blank" rel="noopener noreferrer">
+                  Agar Marteau Fine Art
+                </a>
+              </div>
               <div class="dates">2024 – Present</div>
               <ul>
                 <li>Co-manage an online gallery dedicated to Old Master and modern drawings.</li>
